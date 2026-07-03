@@ -21,16 +21,12 @@
     </div>
   </div>
 
-  <!-- 터치 버튼 영역 -->
-  <div id="touch-area">
-    <button id="btn1" class="touch-btn" onclick="handleTouch(1)">
-      <span class="btn-number">1</span>
-      <span class="btn-label">확인 / 예</span>
-    </button>
-    <button id="btn2" class="touch-btn btn2" onclick="handleTouch(2)">
-      <span class="btn-number">2</span>
-      <span class="btn-label">취소 / 아니오</span>
-    </button>
+  <!-- 전체 화면 터치 안내 영역 -->
+  <div id="touch-area" aria-live="polite">
+    <div id="tap-guide">
+      <div id="tap-count">화면 터치</div>
+      <div id="tap-help">한 번 터치 = 1번 · 두 번 터치 = 2번</div>
+    </div>
   </div>
 
   <!-- 현재 선택 메뉴 표시 -->
@@ -45,7 +41,7 @@
     <div id="payment-menu-name"></div>
     <div id="payment-price"></div>
     <div class="payment-sub">카운터에서 결제해 주세요</div>
-    <button class="restart-btn" onclick="restartApp()">🔄 처음으로</button>
+    <div class="payment-touch-guide">화면을 한 번 터치하면 처음으로 돌아갑니다</div>
   </div>
 
   <script src="menu.js"></script>
